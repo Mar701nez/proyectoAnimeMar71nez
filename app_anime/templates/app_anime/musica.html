@@ -1,0 +1,18 @@
+{% extends 'app_anime/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>🎧 Reproductor de Música / Soundtracks</h1>
+
+<div class="grid">
+    <div class="card">
+        <h3>Opening Theme MP3</h3>
+        <div class="audio-wrapper" style="margin-top: 15px;">
+            <audio controls style="width: 100%;">
+                <source src="{% static 'app_anime/audio/opening.mp3' %}" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio HTML5.
+            </audio>
+        </div>
+    </div>
+</div>
+{% endblock %}

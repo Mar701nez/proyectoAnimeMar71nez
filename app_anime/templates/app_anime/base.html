@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animeverse Portal | Mar71nez</title>
+    <!-- Enlace al CSS global -->
+    <link rel="stylesheet" href="{% static 'app_anime/css/estilos.css' %}">
+</head>
+<body>
+
+    <!-- Se incluye la barra de navegación en todas las páginas que hereden de esta -->
+    {% include 'app_anime/navbar.html' %} 
+
+    <!-- Contenedor principal donde se inyectará el contenido de las otras vistas -->
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

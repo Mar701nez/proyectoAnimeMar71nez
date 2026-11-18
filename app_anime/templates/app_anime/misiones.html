@@ -1,0 +1,50 @@
+{% extends 'app_anime/base.html' %}
+{% load static %}
+
+{% block content %}
+<header class="anime-header">
+    <h1>📜 Tablón de Misiones Oficiales de Konoha</h1>
+</header>
+
+<div class="anime-grid">
+    <!-- Misión Rango S -->
+    <div class="scroll-mission-card">
+        <span class="rank-badge rank-S">Rango S</span>
+        <h3>Derrotar a Miembros de Akatsuki</h3>
+        <p><strong>Asignado a:</strong> Equipo 7 / Equipo 10</p>
+        <p><strong>Detalle:</strong> Interceptar a los ejecutivos de Akatsuki en las fronteras del País del Fuego.</p>
+        <p><strong>Recompensa:</strong> 1,000,000 Ryō</p>
+        <p><strong>Estado:</strong> 🔴 En Curso (Alta Prioridad)</p>
+    </div>
+
+    <!-- Misión Rango A -->
+    <div class="scroll-mission-card">
+        <span class="rank-badge rank-A">Rango A</span>
+        <h3>Escolta del Señor Feudal</h3>
+        <p><strong>Asignado a:</strong> Equipo Gai</p>
+        <p><strong>Detalle:</strong> Proteger la comitiva del Daimyō del País del Fuego frente a ninjas renegados.</p>
+        <p><strong>Recompensa:</strong> 400,000 Ryō</p>
+        <p><strong>Estado:</strong> 🟢 Completada</p>
+    </div>
+
+    <!-- Misión Rango B -->
+    <div class="scroll-mission-card">
+        <span class="rank-badge rank-B">Rango B</span>
+        <h3>Infiltración en la Aldea del Sonido</h3>
+        <p><strong>Asignado a:</strong> Equipo 8 (Rastreo)</p>
+        <p><strong>Detalle:</strong> Utilizar los insectos de Shino y el Byakugan de Hinata para recolectar información sobre Orochimaru.</p>
+        <p><strong>Recompensa:</strong> 150,000 Ryō</p>
+        <p><strong>Estado:</strong> 🔴 En Curso</p>
+    </div>
+
+    <!-- Misión Rango C -->
+    <div class="scroll-mission-card">
+        <span class="rank-badge rank-C">Rango C</span>
+        <h3>Protección contra Bandidos de la Frontera</h3>
+        <p><strong>Asignado a:</strong> Genin novatos</p>
+        <p><strong>Detalle:</strong> Neutralizar a un grupo de mercenarios que asaltan los suministros de Konoha.</p>
+        <p><strong>Recompensa:</strong> 50,000 Ryō</p>
+        <p><strong>Estado:</strong> 🟢 Completada</p>
+    </div>
+</div>
+{% endblock %}

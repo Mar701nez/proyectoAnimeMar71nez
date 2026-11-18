@@ -1,0 +1,48 @@
+{% extends 'app_anime/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>🎬 Sección de Videos</h1>
+
+<div class="grid">
+    <div class="card">
+        <h3>Resumen Naruto</h3>
+        <div class="video-wrapper" style="margin-top: 15px;">
+            <video controls style="width: 100%; border-radius: 8px;">
+                <source src="{% static 'app_anime/video/resumenNaruto.mp4' %}" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video HTML5.
+            </video>
+        </div>
+    </div>
+</div>
+<div class="grid">
+    <div class="card">
+        <h3>Edit Kashi</h3>
+        <div class="video-wrapper" style="margin-top: 15px;">
+            <video controls style="width: 100%; border-radius: 8px;">
+                <source src="{% static 'app_anime/video/editKashi.mp4' %}" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video HTML5.
+            </video>
+        </div>
+    </div>
+</div>
+<div class="video-grid">
+    <!-- Naruto Shippuden -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/l85Y5YywJw4?si=fwx2dt5x1hUpyT51" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-info">
+            <h3>🍥 Naruto Shippuden - Silhouette</h3>
+            <span class="anime-tag">Naruto</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
