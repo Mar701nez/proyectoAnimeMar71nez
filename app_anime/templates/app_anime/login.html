@@ -1,0 +1,67 @@
+{% for message in messages %}
+    <div class="alert {{ message.tags }}">{{ message }}</div>
+{% endfor %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Anime Martínez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+        body {
+            background: #0f172a; color: #f8fafc; min-height: 100vh;
+            display: flex; justify-content: center; align-items: center; padding: 20px;
+        }
+        .card {
+            background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px; padding: 40px; width: 100%; max-width: 400px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 8px; text-align: center; }
+        h1 span { color: #ff6b6b; }
+        p.sub { color: #94a3b8; font-size: 0.9rem; text-align: center; margin-bottom: 24px; }
+        label { display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px; font-weight: 600; }
+        input {
+            width: 100%; padding: 12px; margin-bottom: 16px; border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.15); background: rgba(15, 23, 42, 0.8); color: #fff;
+        }
+        button {
+            width: 100%; padding: 12px; border: none; border-radius: 8px;
+            background: #ff6b6b; color: #fff; font-weight: 800; font-size: 1rem; cursor: pointer;
+        }
+        button:hover { background: #ff5252; }
+        .alert { background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; padding: 10px; border-radius: 8px; margin-bottom: 16px; font-size: 0.85rem; }
+        .link { text-align: center; margin-top: 20px; font-size: 0.9rem; color: #94a3b8; }
+        .link a { color: #38bdf8; text-decoration: none; font-weight: 600; }
+
+        .alert.success { background: rgba(0, 230, 118, 0.2); border-color: #00e676; color: #bbf7d0; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Anime <span>Martínez</span></h1>
+        <p class="sub">Inicia sesión para acceder a tu colección</p>
+
+        {% for message in messages %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <label>Usuario</label>
+            <input type="text" name="username" required placeholder="Tu usuario">
+
+            <label>Contraseña</label>
+            <input type="password" name="password" required placeholder="••••••••">
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <div class="link">
+            ¿No tienes cuenta? <a href="{% url 'registro' %}">Regístrate aquí</a>
+        </div>
+    </div>
+</body>
+</html>

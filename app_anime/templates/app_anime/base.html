@@ -7,6 +7,13 @@
     <title>Animeverse Portal | Mar71nez</title>
     <!-- Enlace al CSS global -->
     <link rel="stylesheet" href="{% static 'app_anime/css/estilos.css' %}">
+    <!-- Agrega estos enlaces dentro de tu <nav> en base.html -->
+<a href="{% url 'coleccion_mongo' %}">Mi Colección</a>
+
+<span style="color: #94a3b8; margin-left: 15px;">👤 {{ request.user.username }}</span>
+<a href="{% url 'logout' %}" style="background: #ff6b6b; color: #fff; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-weight: 700; margin-left: 10px;">
+    Cerrar Sesión
+</a>
 </head>
 <body>
 
